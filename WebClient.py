@@ -288,20 +288,20 @@ class WebClient:
         print()
 
 ######### reservation info #########
-MEMBER_ID = '1880685064'           #
-MEMBER_PW = 'qkralsrms99@'         #
+MEMBER_ID = '회원 번호'           #
+MEMBER_PW = '비밀 번호'         #
 DEPT_STATION = '수서'              #
 ARV_STATION = '대전'               #
-TIME_MIN = '08'                    #
-TIME_MAX = '09'                    #
+TIME_MIN = '10'                    #
+TIME_MAX = '12'                    #
 MONTH = '4'                        #
 DATE = '22'                        #
-NUM_OF_ADULT = '2'                 #
+NUM_OF_ADULT = '1'                 #
 NUM_OF_CHILD = '0'                 #
 SRT_ONLY = True                    #
 EXECUTIVE = False                  #
-USER_PHONE_NUMBER = '01098872154'  #
-USER_BIRTHDAY = '990311'           #
+USER_PHONE_NUMBER = '카카오페이 전화번호'  #
+USER_BIRTHDAY = '카카오페이 생년월일'           #
 ####################################
 ####################################
     
@@ -313,7 +313,7 @@ def dont_exit_until():
     print("GoodBye")
 
 start_time = time.time()
-ui_option = False
+ui_option = True
 browser = WebClient(ui_option)
 try:
     browser.login(MEMBER_ID, MEMBER_PW)
@@ -327,8 +327,8 @@ browser.select_passenger_number(NUM_OF_ADULT, NUM_OF_CHILD)
 # TODO 특정 차표에 대해 일정 횟수 이상 검색하면 리다이렉션된다.
 browser.quick_inquiry()
 browser.select_option(TIME_MAX, EXECUTIVE)
-# browser.settle()
-# browser.send_kakaoPay_request(USER_PHONE_NUMBER, USER_BIRTHDAY)
+browser.settle()
+browser.send_kakaoPay_request(USER_PHONE_NUMBER, USER_BIRTHDAY)
 
 print("elapsed time: %0.2fs" %(time.time()-start_time))
 
