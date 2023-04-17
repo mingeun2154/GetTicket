@@ -34,3 +34,5 @@
 $ chmod +x WebClient.py
 $ ./WebClient.py
 ```
+
+<img src="images/getTicket.gif" alt="demo">
