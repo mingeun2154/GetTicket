@@ -1,4 +1,4 @@
-#! /bin/evn python3
+#! /bin/env python3
 '''
 '''
 from selenium import webdriver
@@ -289,20 +289,20 @@ class WebClient:
         print()
 
 ######### reservation info #########
-MEMBER_ID = '1880685064'           #
-MEMBER_PW = 'qkralsrms99@'         #
-DEPT_STATION = '대전'              #
-ARV_STATION = '수서'               #
-TIME_MIN = '10'                    #
-TIME_MAX = '22'                    #
-MONTH = '4'                        #
-DATE = '7'                        #
-NUM_OF_ADULT = '2'                 #
-NUM_OF_CHILD = '0'                 #
-SRT_ONLY = True                    #
-EXECUTIVE = False                  #
-USER_PHONE_NUMBER = '01067507979'  #
-USER_BIRTHDAY = '980223'           #
+MEMBER_ID = <srt 회원번호>           
+MEMBER_PW = <srt 비밀번호>    
+DEPT_STATION = '대전'              
+ARV_STATION = '수서'               
+TIME_MIN = '10'                    
+TIME_MAX = '22'                    
+MONTH = '4'                        
+DATE = '7'                        
+NUM_OF_ADULT = '2'                 
+NUM_OF_CHILD = '0'                 
+SRT_ONLY = True                    
+EXECUTIVE = False                  
+USER_PHONE_NUMBER = <카카오페이 전화번호> 
+USER_BIRTHDAY = <카카오페이 생일>
 ####################################
 ####################################
     
